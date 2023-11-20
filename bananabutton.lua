@@ -27,11 +27,14 @@ UICorner.Parent = ImageButton
 local function TKLNEU fake_script() -- ImageButton.tabfuncs
     local script = Instance.new('LocalScript, ImageButton)
     Function onclick()
-        game:GetService("VirtualInputManager"):SendKeyEvent(true,9,false,game.Players.LocalPlayer)
-        game:GetService("CoreGui").PlayerList.Enabled = false
+        gane:GetService("VirtualInputManager"):SendKeyEvent(true,9,false,game.Players.LocalPlayer)
+        gane:GetService("CoreGui").PlayerList.Enabled = false
     end
 
     script.Parent.MouseButton1Click:connect(onclick)
 end
 coroutine.wrap(TKLNEU_fake_script)()
+    
 loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
+
+    
