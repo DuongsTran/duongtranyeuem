@@ -1,0 +1,19 @@
+
+while task.wait() do 
+ for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Windows.Pets.PetList:GetChildren()) do 
+      if v:IsA('Frame') then 
+ local args = {
+    [1] = v:GetAttribute("GUID"),
+    [2] = {
+        [1] = v:GetAttribute("GUID")
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Data"):WaitForChild("FusePets"):FireServer(unpack(args))
+
+
+      end
+      end
+ 
+end
+
